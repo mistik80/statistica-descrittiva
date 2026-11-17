@@ -195,6 +195,7 @@
     var reset = function (msg) {
       out.n.textContent = out.mean.textContent = out.med.textContent = out.mode.textContent = '–';
       out.sorted.textContent = ''; out.msg.textContent = msg; out.msg.className = 'err';
+      var lc0 = $('#lab-chart'); if (lc0) lc0.innerHTML = '';
     };
     var run = function () {
       var p = parse(input.value);
@@ -218,6 +219,8 @@
       else if (gap / range > 0.1) msg += 'Media e mediana distano ' + fmt(gap) + ': qualche valore fuori scala tira la media ' + (mean > med ? 'verso l\'alto' : 'verso il basso') + '. Meglio la mediana.';
       else msg += 'Media e mediana sono vicine: i dati sono equilibrati e la media va bene.';
       out.msg.textContent = msg; out.msg.className = '';
+      var lc = $('#lab-chart');
+      if (lc && window.StatCharts) lc.innerHTML = window.StatCharts.dotSvg(v, mean, med, noMode ? [] : modes);
     };
     input.addEventListener('input', run);
     $$('[data-lab]').forEach(function (b) { b.addEventListener('click', function () { input.value = b.dataset.lab; run(); }); });

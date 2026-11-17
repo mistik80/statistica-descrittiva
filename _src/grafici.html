@@ -15,6 +15,7 @@
     <a href="#galleria">I 4 grafici</a>
     <a href="#istogramma">Istogramma da vicino</a>
     <a href="#errori-c">Errori da evitare</a>
+    <a href="#prova-c">Prova tu</a>
   </nav>
 
   <main class="content">
@@ -221,6 +222,44 @@
           <li><strong>Linee tra cose che non sono tempo</strong> (Carta → PayPal → Bonifico): fanno pensare a un andamento che non esiste.</li>
           <li><strong>Istogramma con barre staccate:</strong> confonde le misure con i conteggi.</li>
         </ul>
+      </div>
+    </section>
+
+    <section id="prova-c">
+      <div class="sec-title rv"><span class="num">C.4 · Prova tu</span><h2>Disegna il tuo grafico</h2></div>
+      <p class="rv">Scegli il tipo di grafico, scrivi i tuoi dati e guardalo disegnarsi. Se il grafico non è adatto ai dati, il sito te lo dice.</p>
+      <div class="tool rv" data-tool="chart">
+        <div class="tool-in">
+          <span class="lbl2">1. Scegli il grafico</span>
+          <div class="kinds" role="group" aria-label="Tipo di grafico">
+            <button type="button" data-kind="bar" aria-pressed="true"><svg viewBox="0 0 26 20" aria-hidden="true"><rect x="2" y="8" width="5" height="12"/><rect x="10.5" y="2" width="5" height="18"/><rect x="19" y="11" width="5" height="9"/></svg>Barre</button>
+            <button type="button" data-kind="pie" aria-pressed="false"><svg viewBox="0 0 26 20" aria-hidden="true"><path d="M13 10 L13 1 A9 9 0 1 1 4.4 12.8 Z"/><path d="M12 9 L3.4 11.8 A9 9 0 0 1 12 0 Z" opacity=".5"/></svg>Torta</button>
+            <button type="button" data-kind="line" aria-pressed="false"><svg viewBox="0 0 26 20" aria-hidden="true"><path d="M1 17 L8 11 L14 13 L24 3 L25 4.5 L14 15.5 L8 13.5 L2 18.5 Z"/></svg>Linee</button>
+            <button type="button" data-kind="hist" aria-pressed="false"><svg viewBox="0 0 26 20" aria-hidden="true"><rect x="1" y="12" width="6" height="8"/><rect x="7" y="4" width="6" height="16"/><rect x="13" y="8" width="6" height="12"/><rect x="19" y="15" width="6" height="5"/></svg>Istogramma</button>
+          </div>
+          <label for="fc-in">2. Scrivi i tuoi dati</label>
+          <p class="hint" data-hint></p>
+          <textarea id="fc-in" rows="6" spellcheck="false">Carta: 9
+PayPal: 6
+Bonifico: 3
+Contrassegno: 2</textarea>
+          <div data-wrow hidden>
+            <label for="fc-w">Larghezza delle fasce</label>
+            <input id="fc-w" type="text" inputmode="decimal" placeholder="automatica" spellcheck="false">
+          </div>
+          <div class="exs">
+            <span>Oppure prova un esempio:</span>
+            <button type="button" data-ex-c="bar|Carta: 9\nPayPal: 6\nBonifico: 3\nContrassegno: 2">Pagamenti</button>
+            <button type="button" data-ex-c="pie|Carta: 9\nPayPal: 6\nBonifico: 3\nContrassegno: 2">Pagamenti in torta</button>
+            <button type="button" data-ex-c="line|gen: 120\nfeb: 135\nmar: 150\napr: 148\nmag: 170\ngiu: 210">Ordini al mese</button>
+            <button type="button" data-ex-c="hist|18; 22; 25; 30; 31; 33; 36; 38; 40; 41; 44; 47; 50; 52; 55; 58; 63; 70; 95; 140|24">Tempi di consegna</button>
+            <button type="button" data-ex-c="pie|Bici: 12\nCaschi: 9\nLuci: 7\nCatene: 6\nGomme: 5\nPedali: 4\nSelle: 3\nBorracce: 2">Torta con troppe fette</button>
+          </div>
+        </div>
+        <div class="tool-out" aria-live="polite">
+          <figure class="chart"><div data-chart></div><div class="legend" data-legend hidden></div></figure>
+          <p class="tool-note" data-note></p>
+        </div>
       </div>
     </section>
   </main>

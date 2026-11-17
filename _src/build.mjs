@@ -108,6 +108,7 @@ ${pager}
     </div>
   </div>
 </footer>
+<script src="tools.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

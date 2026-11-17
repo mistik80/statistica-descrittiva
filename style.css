@@ -24,6 +24,8 @@
   --bad-bg: #fde8e6;
   --shadow: rgba(20, 40, 90, .35);
   --on-accent: #ffffff;
+  --c5: #7c4dbd;
+  --c6: #c2410c;
   --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
   --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", Consolas, "Courier New", monospace;
@@ -36,7 +38,7 @@
     --bg: #10141b; --surface: #171d27; --ink: #e6eaf2; --muted: #9aa4b6; --line: #2a3343; --grid: #1c2330;
     --blue: #7ea2ff; --blue-soft: #1d2945; --teal: #3fc1b0; --teal-soft: #14302d; --amber: #f0b24a; --amber-bar: #f0b24a; --amber-soft: #33270f;
     --slate: #8f9ab0; --warn: #f3c56b; --warn-bg: #2a2214; --warn-line: #8a6420; --ok: #5fd39a; --ok-bg: #15281e; --bad: #ff8a80; --bad-bg: #3a1b19;
-    --shadow: rgba(0, 0, 0, .7); --on-accent: #0f1420;
+    --shadow: rgba(0, 0, 0, .7); --on-accent: #0f1420; --c5: #b48cf0; --c6: #ff9a5c;
     color-scheme: dark;
   }
 }
@@ -44,7 +46,7 @@
   --bg: #10141b; --surface: #171d27; --ink: #e6eaf2; --muted: #9aa4b6; --line: #2a3343; --grid: #1c2330;
   --blue: #7ea2ff; --blue-soft: #1d2945; --teal: #3fc1b0; --teal-soft: #14302d; --amber: #f0b24a; --amber-bar: #f0b24a; --amber-soft: #33270f;
   --slate: #8f9ab0; --warn: #f3c56b; --warn-bg: #2a2214; --warn-line: #8a6420; --ok: #5fd39a; --ok-bg: #15281e; --bad: #ff8a80; --bad-bg: #3a1b19;
-  --shadow: rgba(0, 0, 0, .7); --on-accent: #0f1420;
+  --shadow: rgba(0, 0, 0, .7); --on-accent: #0f1420; --c5: #b48cf0; --c6: #ff9a5c;
   color-scheme: dark;
 }
 body.p-a { --sec: var(--teal); --sec-soft: var(--teal-soft); }
@@ -316,6 +318,46 @@ svg .slice { stroke: var(--surface); stroke-width: 2; }
 #lab-msg { font-size: 16px; }
 #lab-msg.err { color: var(--bad); }
 
+/* Strumenti "prova con i tuoi dati" */
+.tool { background: var(--surface); border: 2px solid var(--sec); border-radius: 22px; padding: 28px; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 28px; align-items: start; box-shadow: 0 24px 50px -32px var(--shadow); }
+.tool-in, .tool-out { display: grid; gap: 12px; min-width: 0; align-content: start; }
+.tool label, .tool .lbl2 { font-weight: 700; font-size: 15.5px; }
+.tool textarea, .tool input[type="text"] { width: 100%; font: 15.5px/1.5 var(--font-mono); padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); resize: vertical; }
+.tool textarea:focus, .tool input:focus { outline: 3px solid var(--sec); outline-offset: 1px; }
+.tool .hint { font-size: 14px; color: var(--muted); }
+.tool .exs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tool .exs span { font-size: 13.5px; color: var(--muted); width: 100%; }
+.tool .exs button { font: 600 14px var(--font-body); padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; transition: border-color .2s, transform .2s; }
+.tool .exs button:hover { border-color: var(--sec); transform: translateY(-1px); }
+.tool figure { border-color: var(--line); padding: 14px; }
+.tool figure:hover { transform: none; box-shadow: none; }
+.tool .tool-type { font-weight: 600; padding: 10px 14px; border-radius: 10px; background: var(--sec-soft); }
+.tool .tool-type.err, .tool-note.err { background: var(--bad-bg); color: var(--bad); }
+.tool .tool-note { font-size: 15px; color: var(--muted); }
+.tool .tool-note b { color: var(--ink); }
+.tool .tbl { max-height: 320px; overflow: auto; }
+.tool .tbl th.muted { opacity: .5; }
+.kinds { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.kinds button { font: 700 14.5px var(--font-body); padding: 10px 6px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; display: grid; justify-items: center; gap: 4px; transition: border-color .2s, background .2s; }
+.kinds button svg { width: 26px; height: 20px; }
+.kinds button svg * { fill: var(--muted); }
+.kinds button[aria-pressed="true"] { border-color: var(--sec); background: var(--sec-soft); }
+.kinds button[aria-pressed="true"] svg * { fill: var(--sec); }
+.tool .pie { grid-template-columns: minmax(0, 170px) minmax(0, 1fr); gap: 14px; }
+.tool .legend { font-size: 14px; gap: 4px; }
+.tool .legend div { min-width: 0; }
+.tool .legend .n { white-space: nowrap; font-size: 12.5px; }
+.lab figure { background: var(--surface); }
+.lab figure:hover { transform: none; }
+svg .b5 { fill: var(--c5); } svg .b6 { fill: var(--c6); }
+svg .ptm { fill: var(--amber-bar); stroke: var(--amber-bar); }
+.legend i.b1 { background: var(--blue); } .legend i.b2 { background: var(--teal); } .legend i.b3 { background: var(--amber-bar); }
+.legend i.b4 { background: var(--slate); } .legend i.b5 { background: var(--c5); } .legend i.b6 { background: var(--c6); }
+.key { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13.5px; color: var(--muted); }
+.key i { display: inline-block; width: 18px; height: 0; border-top: 2px solid; vertical-align: middle; margin-right: 6px; }
+.key .k-med { border-color: var(--teal); } .key .k-mean { border-top-style: dashed; border-color: var(--bad); }
+.key .k-mode { width: 10px; height: 10px; border: none; border-radius: 50%; background: var(--amber-bar); }
+
 /* Riepilogo: passi, quiz, glossario */
 .steps { counter-reset: s; list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; max-width: none; }
 .steps li { counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: grid; gap: 6px; align-content: start; }
@@ -400,7 +442,7 @@ html.js .chart.in .pie svg { transform: none; opacity: 1; }
   .toc .eyebrow { width: 100%; margin: 0; }
   .toc a { border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: 14px; }
   .flips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stage { grid-template-columns: minmax(0, 1fr); }
+  .stage, .tool { grid-template-columns: minmax(0, 1fr); }
   .stage-menu { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pick-btns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -426,7 +468,8 @@ html.js .chart.in .pie svg { transform: none; opacity: 1; }
   .pie { grid-template-columns: minmax(0, 1fr); justify-items: center; }
   .pie svg { max-width: 200px; }
   .pie .legend { width: 100%; }
-  .picker, .lab { padding: 22px; }
+  .picker, .lab, .tool { padding: 20px; }
+  .kinds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pager { grid-template-columns: minmax(0, 1fr); }
   .pager a.next { grid-column: 1; }
   .formula { font-size: 18px; }

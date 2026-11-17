@@ -16,6 +16,7 @@
     <a href="#tabella">La tabella</a>
     <a href="#classi">Le misure: le classi</a>
     <a href="#errori-a">Errore da evitare</a>
+    <a href="#prova-a">Prova tu</a>
   </nav>
 
   <main class="content">
@@ -158,6 +159,37 @@
           <li>"Carta + PayPal" sommati non vogliono dire niente: se cambi l'ordine delle righe, cambia il risultato.</li>
           <li>Le cumulate si fanno solo con dati che si possono <strong>mettere in fila</strong>: voti, numeri, misure.</li>
         </ul>
+      </div>
+    </section>
+
+    <section id="prova-a">
+      <div class="sec-title rv"><span class="num">A.5 · Prova tu</span><h2>Costruisci la tua tabella di frequenza</h2></div>
+      <p class="rv">Scrivi i tuoi dati: il sito capisce che tipo di variabile sono, calcola tutte le frequenze e disegna il grafico a barre.</p>
+      <div class="tool rv" data-tool="freq">
+        <div class="tool-in">
+          <label for="fa-in">I tuoi dati (separati da virgola, punto e virgola o uno per riga)</label>
+          <textarea id="fa-in" rows="5" spellcheck="false">Buono, Ottimo, Buono, Scarso, Sufficiente, Buono, Ottimo, Buono, Sufficiente, Buono, Ottimo, Buono</textarea>
+          <label for="fa-ord">Le risposte hanno un ordine? Scrivilo qui</label>
+          <input id="fa-ord" type="text" value="Scarso, Sufficiente, Buono, Ottimo" spellcheck="false">
+          <p class="hint">Lascia vuoto se le risposte non hanno un ordine (es. colori, città, metodo di pagamento). Con i numeri l'ordine lo mette il sito.</p>
+          <div class="exs">
+            <span>Oppure prova un esempio:</span>
+            <button type="button" data-ex-a="Buono, Ottimo, Buono, Scarso, Sufficiente, Buono, Ottimo, Buono, Sufficiente, Buono, Ottimo, Buono|Scarso, Sufficiente, Buono, Ottimo">Voti (ordinale)</button>
+            <button type="button" data-ex-a="Carta, PayPal, Carta, Bonifico, Carta, PayPal, Contrassegno, Carta, PayPal, Carta, Bonifico, Carta|">Pagamenti (nominale)</button>
+            <button type="button" data-ex-a="1, 2, 1, 3, 2, 1, 4, 2, 1, 3, 5, 2, 1, 2, 3, 1, 4, 2, 1, 3|">Articoli per ordine (discreta)</button>
+          </div>
+        </div>
+        <div class="tool-out" aria-live="polite">
+          <p class="tool-type" data-type></p>
+          <figure class="chart"><div data-chart></div></figure>
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Risposta</th><th class="n"><i>n<sub>i</sub></i></th><th class="n"><i>f<sub>i</sub></i></th><th class="n"><i>p<sub>i</sub></i>%</th><th class="n cum"><i>N<sub>i</sub></i></th><th class="n cum"><i>F<sub>i</sub></i></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p class="tool-note" data-note></p>
+        </div>
       </div>
     </section>
   </main>

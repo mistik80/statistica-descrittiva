@@ -1,0 +1,164 @@
+<section class="page-hero">
+  <div class="wrap">
+    <span class="letter" aria-hidden="true">A</span>
+    <span class="eyebrow">Sezione A · Rilevazione e frequenze</span>
+    <h1>Prima di tutto: contare i dati</h1>
+    <p class="lead">Prima di fare qualsiasi calcolo devi capire che tipo di dato hai davanti. Poi conti quante volte compare ogni risposta e metti tutto in una tabella.</p>
+    <div class="chips"><span class="chip">Tipi di variabile</span><span class="chip">4 frequenze</span><span class="chip">Tabella passo per passo</span><span class="chip">Classi</span></div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="In questa pagina">
+    <span class="eyebrow">In questa pagina</span>
+    <a href="#tipi">Che tipo di dato è?</a>
+    <a href="#frequenze">Le 4 frequenze</a>
+    <a href="#tabella">La tabella</a>
+    <a href="#classi">Le misure: le classi</a>
+    <a href="#errori-a">Errore da evitare</a>
+  </nav>
+
+  <main class="content">
+    <section id="tipi">
+      <div class="sec-title rv"><span class="num">A.1</span><h2>Che tipo di dato è?</h2></div>
+      <ul class="rv">
+        <li><strong>Unità statistica</strong> = la cosa che osservi. Qui: un ordine.</li>
+        <li><strong>Carattere</strong> (o <strong>variabile</strong>) = l'informazione che annoti. Qui: per esempio come ha pagato il cliente.</li>
+        <li><strong>Modalità</strong> = le risposte possibili. Qui: Carta, PayPal, Bonifico, Contrassegno.</li>
+      </ul>
+      <p class="rv">I dati sono di due famiglie: a <strong>parole</strong> (<strong>qualitativi</strong>) o con dei <strong>numeri</strong> (<strong>quantitativi</strong>). Ogni famiglia ha due tipi. <strong>Tocca le carte</strong> per vedere l'esempio.</p>
+      <div class="flips rv-stagger">
+        <button class="flip f1" type="button" aria-pressed="false">
+          <span class="flip-in">
+            <span class="face front"><span class="dot"></span><span class="fam">Qualitativa</span><b>Nominale</b><span>Parole <strong>senza un ordine</strong>.</span><span class="hint">Tocca per l'esempio ↻</span></span>
+            <span class="face back"><span class="fam">Esempio</span><b>Come ha pagato</b><span>Carta non è "più" di PayPal. Si può <strong>solo contare</strong>.</span><span class="hint">Tocca per tornare ↻</span></span>
+          </span>
+        </button>
+        <button class="flip f2" type="button" aria-pressed="false">
+          <span class="flip-in">
+            <span class="face front"><span class="dot"></span><span class="fam">Qualitativa</span><b>Ordinale</b><span>Parole <strong>con un ordine</strong>.</span><span class="hint">Tocca per l'esempio ↻</span></span>
+            <span class="face back"><span class="fam">Esempio</span><b>Il voto</b><span>Scarso → Sufficiente → Buono → Ottimo. Si può contare e <strong>mettere in fila</strong>.</span><span class="hint">Tocca per tornare ↻</span></span>
+          </span>
+        </button>
+        <button class="flip f3" type="button" aria-pressed="false">
+          <span class="flip-in">
+            <span class="face front"><span class="dot"></span><span class="fam">Quantitativa</span><b>Discreta</b><span>Numeri <strong>che si contano</strong>.</span><span class="hint">Tocca per l'esempio ↻</span></span>
+            <span class="face back"><span class="fam">Esempio</span><b>Quanti articoli</b><span>1, 2, 3… mai 2,7. Si possono <strong>fare i conti</strong>.</span><span class="hint">Tocca per tornare ↻</span></span>
+          </span>
+        </button>
+        <button class="flip f4" type="button" aria-pressed="false">
+          <span class="flip-in">
+            <span class="face front"><span class="dot"></span><span class="fam">Quantitativa</span><b>Continua</b><span>Numeri <strong>che si misurano</strong>.</span><span class="hint">Tocca per l'esempio ↻</span></span>
+            <span class="face back"><span class="fam">Esempio</span><b>Tempo di consegna</b><span>18,5 h; 41,25 h… Di solito si <strong>dividono in fasce</strong>.</span><span class="hint">Tocca per tornare ↻</span></span>
+          </span>
+        </button>
+      </div>
+      <div class="tbl rv">
+        <table>
+          <thead><tr><th>Tipo</th><th>In parole semplici</th><th>Esempio</th><th>Cosa puoi fare</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Qualitativa nominale</strong></td><td>Parole senza ordine</td><td>Metodo di pagamento</td><td>Solo contare</td></tr>
+            <tr><td><strong>Qualitativa ordinale</strong></td><td>Parole con un ordine</td><td>Voto del cliente</td><td>Contare e mettere in fila</td></tr>
+            <tr><td><strong>Quantitativa discreta</strong></td><td>Numeri che si contano</td><td>Numero di articoli</td><td>Contare, mettere in fila, fare i conti</td></tr>
+            <tr><td><strong>Quantitativa continua</strong></td><td>Numeri che si misurano</td><td>Tempo di consegna</td><td>Come sopra, più le fasce</td></tr>
+          </tbody>
+          <caption>Tavola comparativa dei tipi di variabile. Più scendi, più cose puoi fare.</caption>
+        </table>
+      </div>
+    </section>
+
+    <section id="frequenze">
+      <div class="sec-title rv"><span class="num">A.2</span><h2>Le 4 frequenze</h2></div>
+      <p class="rv">"Frequenza" vuol dire semplicemente <strong>quante volte</strong> compare una risposta. Ci sono quattro modi di dirlo:</p>
+      <div class="tabs rv" data-tabs>
+        <div class="tablist" role="tablist" aria-label="Tipi di frequenza">
+          <button type="button" role="tab" id="t-ass" aria-controls="p-ass" aria-selected="true">Assoluta</button>
+          <button type="button" role="tab" id="t-rel" aria-controls="p-rel" aria-selected="false" tabindex="-1">Relativa</button>
+          <button type="button" role="tab" id="t-per" aria-controls="p-per" aria-selected="false" tabindex="-1">Percentuale</button>
+          <button type="button" role="tab" id="t-cum" aria-controls="p-cum" aria-selected="false" tabindex="-1">Cumulata</button>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-ass" aria-labelledby="t-ass">
+          <p class="oneline">Quante volte compare una risposta.</p>
+          <ul><li><strong>Simbolo:</strong> <i>n<sub>i</sub></i>. Sommandole tutte ottieni il totale <i>N</i>.</li><li><strong>Esempio:</strong> 9 clienti su 20 hanno dato "Buono" → <i>n</i> = 9.</li></ul>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-rel" aria-labelledby="t-rel" hidden>
+          <p class="oneline">La stessa cosa, ma come parte del totale.</p>
+          <div class="formula"><math><msub><mi>f</mi><mi>i</mi></msub><mo>=</mo><mfrac><msub><mi>n</mi><mi>i</mi></msub><mi>N</mi></mfrac></math><span class="cap">È un numero tra 0 e 1. Sommandole tutte fa 1.</span></div>
+          <ul><li><strong>Esempio:</strong> 9 / 20 = <strong>0,45</strong>.</li></ul>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-per" aria-labelledby="t-per" hidden>
+          <p class="oneline">La relativa trasformata in percentuale.</p>
+          <div class="formula"><math><msub><mi>p</mi><mi>i</mi></msub><mo>%</mo><mo>=</mo><msub><mi>f</mi><mi>i</mi></msub><mo>×</mo><mn>100</mn></math><span class="cap">Sommandole tutte fa 100%.</span></div>
+          <ul><li><strong>Esempio:</strong> 0,45 × 100 = <strong>45%</strong> dei clienti ha dato "Buono".</li></ul>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-cum" aria-labelledby="t-cum" hidden>
+          <p class="oneline">Un totale che si accumula riga dopo riga.</p>
+          <div class="formula">
+            <math><msub><mi>N</mi><mi>i</mi></msub><mo>=</mo><msub><mi>n</mi><mn>1</mn></msub><mo>+</mo><msub><mi>n</mi><mn>2</mn></msub><mo>+</mo><mo>…</mo><mo>+</mo><msub><mi>n</mi><mi>i</mi></msub></math>
+            <math><msub><mi>F</mi><mi>i</mi></msub><mo>=</mo><mfrac><msub><mi>N</mi><mi>i</mi></msub><mi>N</mi></mfrac></math>
+            <span class="cap">L'ultima riga vale sempre <i>N</i> (assoluta) o 1 (relativa): un controllo veloce sui conti.</span>
+          </div>
+          <ul><li><strong>Serve per:</strong> "quanti clienti hanno dato <strong>al massimo</strong> Buono?" → 15 su 20.</li><li><strong>Solo</strong> se le risposte si possono mettere in fila (voti, numeri, misure).</li></ul>
+        </div>
+      </div>
+      <div class="tbl rv">
+        <table>
+          <thead><tr><th>Frequenza</th><th>Simbolo</th><th>Domanda</th><th class="n">Totale</th><th>Per quali dati</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Assoluta</strong></td><td><i>n<sub>i</sub></i></td><td>Quanti?</td><td class="n"><i>N</i></td><td>Tutti</td></tr>
+            <tr><td><strong>Relativa</strong></td><td><i>f<sub>i</sub></i></td><td>Che parte del totale?</td><td class="n">1</td><td>Tutti</td></tr>
+            <tr><td><strong>Percentuale</strong></td><td><i>p<sub>i</sub></i>%</td><td>Che percentuale?</td><td class="n">100%</td><td>Tutti</td></tr>
+            <tr><td><strong>Cumulata</strong></td><td><i>N<sub>i</sub></i>, <i>F<sub>i</sub></i></td><td>Quanti fino a qui?</td><td class="n"><i>N</i> o 1</td><td><strong>Solo dati con un ordine</strong></td></tr>
+          </tbody>
+          <caption>Tavola comparativa delle frequenze.</caption>
+        </table>
+      </div>
+    </section>
+
+    <section id="tabella">
+      <div class="sec-title rv"><span class="num">A.3</span><h2>La tabella, passo per passo</h2></div>
+      <p class="rv">Una tabella di frequenza si costruisce sempre allo stesso modo, una colonna alla volta. Premi il pulsante e guardala nascere con i voti dei 20 clienti.</p>
+      <div class="builder rv" data-builder>
+        <div class="builder-bar">
+          <button class="btn btn-main" type="button" data-next>Colonna successiva →</button>
+          <button class="btn btn-ghost" type="button" data-reset>Ricomincia</button>
+          <span class="step-txt" aria-live="polite"></span>
+        </div>
+        <div class="tbl">
+          <table>
+            <thead><tr><th data-c="0">Voto <i>x<sub>i</sub></i></th><th class="n" data-c="1"><i>n<sub>i</sub></i></th><th class="n" data-c="2"><i>f<sub>i</sub></i></th><th class="n" data-c="3"><i>p<sub>i</sub></i>%</th><th class="n" data-c="4"><i>N<sub>i</sub></i></th><th class="n" data-c="5"><i>F<sub>i</sub></i></th></tr></thead>
+            <tbody>
+              <tr><td data-c="0">Scarso</td><td class="n" data-c="1">2</td><td class="n" data-c="2">0,10</td><td class="n" data-c="3">10%</td><td class="n" data-c="4">2</td><td class="n" data-c="5">0,10</td></tr>
+              <tr><td data-c="0">Sufficiente</td><td class="n" data-c="1">4</td><td class="n" data-c="2">0,20</td><td class="n" data-c="3">20%</td><td class="n" data-c="4">6</td><td class="n" data-c="5">0,30</td></tr>
+              <tr><td data-c="0">Buono</td><td class="n" data-c="1">9</td><td class="n" data-c="2">0,45</td><td class="n" data-c="3">45%</td><td class="n" data-c="4">15</td><td class="n" data-c="5">0,75</td></tr>
+              <tr><td data-c="0">Ottimo</td><td class="n" data-c="1">5</td><td class="n" data-c="2">0,25</td><td class="n" data-c="3">25%</td><td class="n" data-c="4">20</td><td class="n" data-c="5">1,00</td></tr>
+              <tr class="tot"><td data-c="0">Totale</td><td class="n" data-c="1">20</td><td class="n" data-c="2">1,00</td><td class="n" data-c="3">100%</td><td class="n" data-c="4">–</td><td class="n" data-c="5">–</td></tr>
+            </tbody>
+            <caption>Riga "Buono": 9 clienti, cioè il 45%. Contando anche quelli sopra, 15 clienti su 20 (il 75%) hanno dato al massimo Buono.</caption>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="classi">
+      <div class="sec-title rv"><span class="num">A.4</span><h2>E con le misure? Le classi</h2></div>
+      <ul class="rv">
+        <li>Con i tempi di consegna quasi ogni numero è diverso dagli altri: contarli uno per uno non serve.</li>
+        <li>Allora si dividono in <strong>fasce</strong>, che in statistica si chiamano <strong>classi</strong>: per esempio "da 24 a 48 ore".</li>
+        <li>Si scrive <span class="mono">[24, 48)</span>: la quadra vuol dire <strong>24 compreso</strong>, la tonda <strong>48 escluso</strong>. Così nessun ordine finisce in due fasce.</li>
+        <li>L'esempio completo con l'istogramma è nella <a href="grafici.html#istogramma">Sezione C</a>.</li>
+      </ul>
+    </section>
+
+    <section id="errori-a">
+      <div class="warn rv">
+        <span class="lbl">Errore comune · Cumulate</span>
+        <p><strong>Non fare le cumulate se i dati non hanno un ordine.</strong></p>
+        <ul>
+          <li>"Carta + PayPal" sommati non vogliono dire niente: se cambi l'ordine delle righe, cambia il risultato.</li>
+          <li>Le cumulate si fanno solo con dati che si possono <strong>mettere in fila</strong>: voti, numeri, misure.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>

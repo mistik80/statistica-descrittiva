@@ -1,0 +1,227 @@
+<section class="page-hero">
+  <div class="wrap">
+    <span class="letter" aria-hidden="true">C</span>
+    <span class="eyebrow">Sezione C · Rappresentazioni grafiche</span>
+    <h1>Il grafico giusto per ogni dato</h1>
+    <p class="lead">Un buon grafico si capisce in tre secondi. Uno sbagliato inganna chi lo legge. Per scegliere bastano due domande: che dato ho? Cosa voglio far vedere?</p>
+    <div class="chips"><span class="chip">Barre</span><span class="chip">Istogramma</span><span class="chip">Torta</span><span class="chip">Linee</span></div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="In questa pagina">
+    <span class="eyebrow">In questa pagina</span>
+    <a href="#scegliere">Come scegliere</a>
+    <a href="#galleria">I 4 grafici</a>
+    <a href="#istogramma">Istogramma da vicino</a>
+    <a href="#errori-c">Errori da evitare</a>
+  </nav>
+
+  <main class="content">
+    <section id="scegliere">
+      <div class="sec-title rv"><span class="num">C.1</span><h2>Due domande per scegliere</h2></div>
+      <ul class="rv">
+        <li><strong>Che tipo di dato ho?</strong> (vedi la <a href="frequenze.html#tipi">Sezione A</a>)</li>
+        <li><strong>Cosa voglio far vedere?</strong> Un confronto tra gruppi, dove si concentrano i dati, le fette di un totale, oppure come cambia qualcosa nel tempo.</li>
+      </ul>
+      <div class="tbl rv">
+        <table>
+          <thead><tr><th>Grafico</th><th>Per quali dati</th><th>Cosa mostra</th><th>Com'è fatto</th><th>Non usarlo se…</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Barre</strong></td><td>Parole, numeri che si contano</td><td>Quante volte compare ogni risposta</td><td>Barre <strong>staccate</strong>, altezza = frequenza</td><td>hai delle misure</td></tr>
+            <tr><td><strong>Istogramma</strong></td><td>Misure divise in fasce</td><td><strong>Dove si concentrano</strong> i dati</td><td>Barre <strong>attaccate</strong>, conta l'area</td><td>i dati non sono in fasce</td></tr>
+            <tr><td><strong>Torta</strong></td><td>Poche risposte a parole</td><td>Le <strong>fette di un totale</strong></td><td>Spicchi, angolo = <i>f<sub>i</sub></i> × 360°</td><td>hai <strong>più di 5-6 fette</strong></td></tr>
+            <tr><td><strong>Linee</strong></td><td>Numeri raccolti nel tempo</td><td>Come <strong>cambia</strong> un valore</td><td>Punti uniti da una linea</td><td>sull'asse orizzontale non c'è il tempo</td></tr>
+          </tbody>
+          <caption>Tavola comparativa dei grafici.</caption>
+        </table>
+      </div>
+    </section>
+
+    <section id="galleria">
+      <div class="sec-title rv"><span class="num">C.2</span><h2>I 4 grafici da vicino</h2></div>
+      <p class="rv">Scegli un grafico dal menu: lo vedi disegnarsi, con quando usarlo e quando no.</p>
+      <div class="stage rv" data-tabs>
+        <div class="stage-menu" role="tablist" aria-label="Tipi di grafico" aria-orientation="vertical">
+          <button type="button" role="tab" id="g-bar" aria-controls="gp-bar" aria-selected="true">Barre<span>per contare le risposte</span></button>
+          <button type="button" role="tab" id="g-pie" aria-controls="gp-pie" aria-selected="false" tabindex="-1">Torta<span>per le fette di un totale</span></button>
+          <button type="button" role="tab" id="g-line" aria-controls="gp-line" aria-selected="false" tabindex="-1">Linee<span>per l'andamento nel tempo</span></button>
+          <button type="button" role="tab" id="g-hist" aria-controls="gp-hist" aria-selected="false" tabindex="-1">Istogramma<span>per le misure in fasce</span></button>
+        </div>
+
+        <div class="stage-panel" role="tabpanel" id="gp-bar" aria-labelledby="g-bar">
+          <figure class="chart">
+            <h3>Grafico a barre · articoli per ordine</h3>
+            <svg viewBox="0 0 360 215" role="img" aria-label="Grafico a barre del numero di articoli per ordine: 1 articolo 7 ordini, 2 articoli 6, 3 articoli 4, 4 articoli 2, 5 articoli 1">
+              <g><line class="gl" x1="40" y1="140" x2="340" y2="140"/><line class="gl" x1="40" y1="100" x2="340" y2="100"/><line class="gl" x1="40" y1="60" x2="340" y2="60"/><line class="gl" x1="40" y1="20" x2="340" y2="20"/></g>
+              <g text-anchor="end"><text x="33" y="184">0</text><text x="33" y="144">2</text><text x="33" y="104">4</text><text x="33" y="64">6</text><text x="33" y="24">8</text></g>
+              <rect class="b1" x="52" y="40" width="36" height="140" rx="3"/>
+              <rect class="b1" x="112" y="60" width="36" height="120" rx="3"/>
+              <rect class="b1" x="172" y="100" width="36" height="80" rx="3"/>
+              <rect class="b1" x="232" y="140" width="36" height="40" rx="3"/>
+              <rect class="b1" x="292" y="160" width="36" height="20" rx="3"/>
+              <g text-anchor="middle">
+                <text class="val" x="70" y="35">7</text><text class="val" x="130" y="55">6</text><text class="val" x="190" y="95">4</text><text class="val" x="250" y="135">2</text><text class="val" x="310" y="155">1</text>
+                <text x="70" y="197">1</text><text x="130" y="197">2</text><text x="190" y="197">3</text><text x="250" y="197">4</text><text x="310" y="197">5</text>
+                <text x="190" y="213">articoli per ordine</text>
+              </g>
+              <line class="axis" x1="40" y1="180" x2="340" y2="180"/>
+            </svg>
+          </figure>
+          <div class="dos">
+            <div class="do"><b>Usalo per</b><ul><li>Dati a parole e numeri che si contano.</li><li>Confrontare quante volte compare ogni risposta.</li></ul></div>
+            <div class="dont"><b>Attenzione</b><ul><li>Le barre sono <strong>staccate</strong>: tra 1 e 2 articoli non c'è niente.</li><li>Con i voti tieni l'ordine naturale (Scarso → Ottimo).</li></ul></div>
+          </div>
+        </div>
+
+        <div class="stage-panel" role="tabpanel" id="gp-pie" aria-labelledby="g-pie" hidden>
+          <figure class="chart">
+            <h3>Grafico a torta · metodo di pagamento</h3>
+            <div class="pie">
+              <svg viewBox="0 0 220 220" role="img" aria-label="Grafico a torta dei metodi di pagamento: Carta 45%, PayPal 30%, Bonifico 15%, Contrassegno 10%">
+                <path class="slice b1" d="M110,110 L110,20 A90,90 0 0 1 137.81,195.60 Z"/>
+                <path class="slice b2" d="M110,110 L137.81,195.60 A90,90 0 0 1 20,110 Z"/>
+                <path class="slice b3" d="M110,110 L20,110 A90,90 0 0 1 57.10,37.19 Z"/>
+                <path class="slice b4" d="M110,110 L57.10,37.19 A90,90 0 0 1 110,20 Z"/>
+              </svg>
+              <div class="legend">
+                <div><i style="background:var(--blue)"></i>Carta<span class="n">45%</span></div>
+                <div><i style="background:var(--teal)"></i>PayPal<span class="n">30%</span></div>
+                <div><i style="background:var(--amber-bar)"></i>Bonifico<span class="n">15%</span></div>
+                <div><i style="background:var(--slate)"></i>Contrassegno<span class="n">10%</span></div>
+              </div>
+            </div>
+          </figure>
+          <div class="formula"><math><msub><mi>α</mi><mi>i</mi></msub><mo>=</mo><msub><mi>f</mi><mi>i</mi></msub><mo>×</mo><mn>360</mn><mo>°</mo></math><span class="cap">Angolo di ogni fetta. Esempio Carta: 0,45 × 360° = 162°.</span></div>
+          <div class="dos">
+            <div class="do"><b>Usalo per</b><ul><li>Le <strong>fette di un totale</strong> che fa 100%.</li><li>Poche fette: al massimo 5 o 6.</li></ul></div>
+            <div class="dont"><b>Evitalo se</b><ul><li>Hai tante categorie.</li><li>Le fette sono quasi uguali: l'occhio confronta male gli angoli, meglio le barre.</li></ul></div>
+          </div>
+        </div>
+
+        <div class="stage-panel" role="tabpanel" id="gp-line" aria-labelledby="g-line" hidden>
+          <figure class="chart">
+            <h3>Grafico a linee · ordini al mese</h3>
+            <svg viewBox="0 0 380 215" role="img" aria-label="Grafico a linee degli ordini al mese da gennaio a giugno: 120, 135, 150, 148, 170, 210">
+              <g><line class="gl" x1="40" y1="126.67" x2="350" y2="126.67"/><line class="gl" x1="40" y1="73.33" x2="350" y2="73.33"/><line class="gl" x1="40" y1="20" x2="350" y2="20"/></g>
+              <g text-anchor="end"><text x="33" y="184">100</text><text x="33" y="130.67">140</text><text x="33" y="77.33">180</text><text x="33" y="24">220</text></g>
+              <polyline class="ln" points="50,153.33 110,133.33 170,113.33 230,116 290,86.67 340,33.33"/>
+              <g>
+                <circle class="pt" cx="50" cy="153.33" r="4.5"/><circle class="pt" cx="110" cy="133.33" r="4.5"/><circle class="pt" cx="170" cy="113.33" r="4.5"/>
+                <circle class="pt" cx="230" cy="116" r="4.5"/><circle class="pt" cx="290" cy="86.67" r="4.5"/><circle class="pt" cx="340" cy="33.33" r="4.5"/>
+              </g>
+              <g text-anchor="middle">
+                <text class="val" x="50" y="143">120</text><text class="val" x="110" y="123">135</text><text class="val" x="170" y="103">150</text><text class="val" x="230" y="134">148</text><text class="val" x="290" y="76">170</text><text class="val" x="325" y="30" text-anchor="end">210</text>
+                <text x="50" y="197">gen</text><text x="110" y="197">feb</text><text x="170" y="197">mar</text><text x="230" y="197">apr</text><text x="290" y="197">mag</text><text x="340" y="197">giu</text>
+              </g>
+              <line class="axis" x1="40" y1="180" x2="350" y2="180"/>
+            </svg>
+          </figure>
+          <div class="dos">
+            <div class="do"><b>Usalo per</b><ul><li>Vedere <strong>come cambia un valore nel tempo</strong>: una <strong>serie storica</strong>.</li><li>Il tempo va sull'asse orizzontale, a passi regolari.</li></ul></div>
+            <div class="dont"><b>Attenzione</b><ul><li>Qui l'asse verticale parte da 100: si può fare, ma va <strong>detto</strong>, perché ingrandisce le variazioni.</li><li>Mai linee tra cose che non sono tempo.</li></ul></div>
+          </div>
+        </div>
+
+        <div class="stage-panel" role="tabpanel" id="gp-hist" aria-labelledby="g-hist" hidden>
+          <figure class="chart">
+            <h3>Istogramma · tempi di consegna</h3>
+            <svg viewBox="0 0 360 215" role="img" aria-label="Istogramma dei tempi di consegna con altezza uguale alla densità">
+              <g><line class="gl" x1="40" y1="140" x2="340" y2="140"/><line class="gl" x1="40" y1="100" x2="340" y2="100"/><line class="gl" x1="40" y1="60" x2="340" y2="60"/><line class="gl" x1="40" y1="20" x2="340" y2="20"/></g>
+              <g text-anchor="end"><text x="33" y="184">0</text><text x="33" y="144">0,1</text><text x="33" y="104">0,2</text><text x="33" y="64">0,3</text><text x="33" y="24">0,4</text></g>
+              <rect class="b2 slice" x="40" y="113.33" width="42.86" height="66.67"/>
+              <rect class="b2 slice" x="82.86" y="30" width="42.85" height="150"/>
+              <rect class="b2 slice" x="125.71" y="96.67" width="42.86" height="83.33"/>
+              <rect class="b2 slice" x="168.57" y="171.67" width="171.43" height="8.33"/>
+              <g text-anchor="middle">
+                <text class="val" x="61.4" y="108">4</text><text class="val" x="104.3" y="25">9</text><text class="val" x="147.1" y="91">5</text><text class="val" x="254.3" y="166">2</text>
+                <text x="40" y="197">0</text><text x="82.86" y="197">24</text><text x="125.71" y="197">48</text><text x="168.57" y="197">72</text><text x="334" y="197">168</text>
+                <text x="190" y="213">ore</text>
+              </g>
+              <line class="axis" x1="40" y1="180" x2="340" y2="180"/>
+            </svg>
+          </figure>
+          <div class="dos">
+            <div class="do"><b>Usalo per</b><ul><li>Le <strong>misure</strong> divise in fasce (tempi, pesi, altezze).</li><li>Vedere dove si concentrano i dati.</li></ul></div>
+            <div class="dont"><b>Attenzione</b><ul><li>Barre <strong>attaccate</strong>, senza buchi.</li><li>Conta l'<strong>area</strong>: vedi qui sotto perché.</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="istogramma">
+      <div class="sec-title rv"><span class="num">C.3</span><h2>Istogramma: il trucco dell'area</h2></div>
+      <ul class="rv">
+        <li>Nell'istogramma conta l'<strong>area</strong> della barra, non solo l'altezza.</li>
+        <li>Se le fasce hanno larghezze diverse, l'altezza si calcola con la <strong>densità</strong>: quanti dati ci sono per ogni unità di larghezza (qui, per ogni ora).</li>
+      </ul>
+      <div class="formula rv">
+        <math><mtext>densità&#160;</mtext><msub><mi>d</mi><mi>i</mi></msub><mo>=</mo><mfrac><msub><mi>n</mi><mi>i</mi></msub><msub><mi>a</mi><mi>i</mi></msub></mfrac></math>
+        <span class="cap"><i>a<sub>i</sub></i> = larghezza della fascia. Se tutte le fasce sono larghe uguali, puoi usare direttamente la frequenza come altezza.</span>
+      </div>
+      <div class="tbl rv">
+        <table>
+          <thead><tr><th>Tempo di consegna (ore)</th><th class="n">Ordini <i>n<sub>i</sub></i></th><th class="n">Larghezza <i>a<sub>i</sub></i></th><th class="n">Densità <i>d<sub>i</sub></i></th></tr></thead>
+          <tbody>
+            <tr><td>[0, 24)</td><td class="n">4</td><td class="n">24</td><td class="n">0,167</td></tr>
+            <tr><td>[24, 48)</td><td class="n">9</td><td class="n">24</td><td class="n">0,375</td></tr>
+            <tr><td>[48, 72)</td><td class="n">5</td><td class="n">24</td><td class="n">0,208</td></tr>
+            <tr><td>[72, 168)</td><td class="n">2</td><td class="n">96</td><td class="n">0,021</td></tr>
+            <tr class="tot"><td>Totale</td><td class="n">20</td><td class="n">–</td><td class="n">–</td></tr>
+          </tbody>
+          <caption>L'ultima fascia è 4 volte più larga delle altre. La fascia più affollata (classe modale) è [24, 48).</caption>
+        </table>
+      </div>
+      <div class="stack rv">
+        <div class="toggle" role="group" aria-label="Versione dell'istogramma" data-toggle>
+          <button type="button" class="okb" data-show="h-ok" aria-pressed="true">✓ Giusto</button>
+          <button type="button" class="badb" data-show="h-bad" aria-pressed="false">✗ Sbagliato</button>
+        </div>
+        <figure class="chart" id="h-ok">
+          <svg viewBox="0 0 360 215" role="img" aria-label="Istogramma corretto: l'ultima fascia larga 96 ore è molto bassa">
+            <g><line class="gl" x1="40" y1="140" x2="340" y2="140"/><line class="gl" x1="40" y1="100" x2="340" y2="100"/><line class="gl" x1="40" y1="60" x2="340" y2="60"/><line class="gl" x1="40" y1="20" x2="340" y2="20"/></g>
+            <g text-anchor="end"><text x="33" y="184">0</text><text x="33" y="144">0,1</text><text x="33" y="104">0,2</text><text x="33" y="64">0,3</text><text x="33" y="24">0,4</text></g>
+            <rect class="b2 slice" x="40" y="113.33" width="42.86" height="66.67"/>
+            <rect class="b2 slice" x="82.86" y="30" width="42.85" height="150"/>
+            <rect class="b2 slice" x="125.71" y="96.67" width="42.86" height="83.33"/>
+            <rect class="b2 slice" x="168.57" y="171.67" width="171.43" height="8.33"/>
+            <g text-anchor="middle">
+              <text x="40" y="197">0</text><text x="82.86" y="197">24</text><text x="125.71" y="197">48</text><text x="168.57" y="197">72</text><text x="334" y="197">168</text>
+              <text x="190" y="213">ore · altezza = densità</text>
+            </g>
+            <line class="axis" x1="40" y1="180" x2="340" y2="180"/>
+          </svg>
+          <figcaption><b class="yes">Giusto:</b> altezza = densità. L'ultima fascia è larga ma bassissima: si vede subito che lì ci sono pochi ordini (solo 2).</figcaption>
+        </figure>
+        <figure class="chart" id="h-bad" hidden>
+          <svg viewBox="0 0 360 215" role="img" aria-label="Istogramma sbagliato: l'ultima fascia sembra enorme">
+            <g><line class="gl" x1="40" y1="148" x2="340" y2="148"/><line class="gl" x1="40" y1="116" x2="340" y2="116"/><line class="gl" x1="40" y1="84" x2="340" y2="84"/><line class="gl" x1="40" y1="52" x2="340" y2="52"/><line class="gl" x1="40" y1="20" x2="340" y2="20"/></g>
+            <g text-anchor="end"><text x="33" y="184">0</text><text x="33" y="152">2</text><text x="33" y="120">4</text><text x="33" y="88">6</text><text x="33" y="56">8</text><text x="33" y="24">10</text></g>
+            <rect class="b4 slice" x="40" y="116" width="42.86" height="64"/>
+            <rect class="b4 slice" x="82.86" y="36" width="42.85" height="144"/>
+            <rect class="b4 slice" x="125.71" y="100" width="42.86" height="80"/>
+            <rect class="badbar slice" x="168.57" y="148" width="171.43" height="32"/>
+            <g text-anchor="middle">
+              <text x="40" y="197">0</text><text x="82.86" y="197">24</text><text x="125.71" y="197">48</text><text x="168.57" y="197">72</text><text x="334" y="197">168</text>
+              <text x="190" y="213">ore · altezza = numero di ordini</text>
+            </g>
+            <line class="axis" x1="40" y1="180" x2="340" y2="180"/>
+          </svg>
+          <figcaption><b class="no">Sbagliato:</b> altezza = numero di ordini, con fasce di larghezza diversa. Il blocco rosso sembra pieno, ma contiene solo 2 ordini.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="errori-c">
+      <div class="warn rv">
+        <span class="lbl">Errore comune · Grafico sbagliato</span>
+        <ul>
+          <li><strong>Torta con 15 fette:</strong> non si legge niente. Usa le barre, oppure raggruppa le fette piccole in "Altro".</li>
+          <li><strong>Torta con percentuali che non fanno 100%</strong> (es. domande con più risposte possibili): la torta funziona solo con le fette di un unico totale.</li>
+          <li><strong>Linee tra cose che non sono tempo</strong> (Carta → PayPal → Bonifico): fanno pensare a un andamento che non esiste.</li>
+          <li><strong>Istogramma con barre staccate:</strong> confonde le misure con i conteggi.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>

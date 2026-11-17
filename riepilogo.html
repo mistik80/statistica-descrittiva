@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Riepilogo, quiz e glossario · Statistica descrittiva spiegata semplice</title>
+<meta name="description" content="Tabella riassuntiva, quiz per mettersi alla prova e glossario delle parole chiave della statistica descrittiva.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mistik80.github.io/statistica-descrittiva/riepilogo.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mistik80.github.io/statistica-descrittiva/riepilogo.html">
+<meta property="og:title" content="Riepilogo, quiz e glossario · Statistica descrittiva spiegata semplice">
+<meta property="og:description" content="Tabella riassuntiva, quiz per mettersi alla prova e glossario delle parole chiave della statistica descrittiva.">
+<meta property="og:locale" content="it_IT">
+<meta name="theme-color" content="#2557c7">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="p-r">
+<div class="progress" aria-hidden="true"></div>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Statistica semplice</a>
+    <button class="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul class="nav-links" id="menu">
+        <li><a href="frequenze.html"><span class="k">A</span>Frequenze</a></li>
+        <li><a href="indici.html"><span class="k">B</span>Media, mediana, moda</a></li>
+        <li><a href="grafici.html"><span class="k">C</span>Grafici</a></li>
+        <li><a href="riepilogo.html" aria-current="page"><span class="k">✓</span>Riepilogo e quiz</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="letter" aria-hidden="true">✓</span>
+    <span class="eyebrow">Riepilogo</span>
+    <h1>Tutto in una pagina, poi mettiti alla prova</h1>
+    <p class="lead">La tabella che riassume la guida, quattro passi per leggere qualsiasi report, un quiz veloce e il glossario delle parole chiave.</p>
+    <div class="chips"><span class="chip">Tabella finale</span><span class="chip">4 passi</span><span class="chip">Quiz</span><span class="chip">Glossario</span></div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="In questa pagina">
+    <span class="eyebrow">In questa pagina</span>
+    <a href="#tabella-finale">Tabella finale</a>
+    <a href="#passi">4 passi</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#glossario">Glossario</a>
+  </nav>
+
+  <main class="content">
+    <section id="tabella-finale">
+      <div class="sec-title rv"><span class="num">R.1</span><h2>Che dati hai, cosa usi</h2></div>
+      <div class="tbl rv">
+        <table>
+          <thead><tr><th></th><th>Parole senza ordine</th><th>Parole con ordine</th><th>Numeri che si contano</th><th>Misure</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Nome tecnico</strong></td><td>Qualitativa nominale</td><td>Qualitativa ordinale</td><td>Quantitativa discreta</td><td>Quantitativa continua</td></tr>
+            <tr><td><strong>Esempio</strong></td><td>Pagamento</td><td>Voto</td><td>N. articoli</td><td>Tempo di consegna</td></tr>
+            <tr><td><strong>Cumulate</strong></td><td class="no">No</td><td class="yes">Sì</td><td class="yes">Sì</td><td class="yes">Sì, sulle fasce</td></tr>
+            <tr><td><strong>Media</strong></td><td class="no">No</td><td class="no">No</td><td class="yes">Sì</td><td class="yes">Sì</td></tr>
+            <tr><td><strong>Numero da usare</strong></td><td><strong>Moda</strong></td><td><strong>Mediana</strong></td><td><strong>Media</strong>, o <strong>mediana</strong> con valori fuori scala</td><td>Come a sinistra, più la <strong>classe modale</strong></td></tr>
+            <tr><td><strong>Grafico</strong></td><td>Barre, o torta con poche fette</td><td>Barre in ordine</td><td>Barre staccate</td><td>Istogramma; linee se è nel tempo</td></tr>
+          </tbody>
+          <caption>Tavola comparativa finale: parti dalla colonna giusta e leggi in verticale.</caption>
+        </table>
+      </div>
+    </section>
+
+    <section id="passi">
+      <div class="sec-title rv"><span class="num">R.2</span><h2>Leggere un report in 4 passi</h2></div>
+      <ol class="steps rv-stagger">
+        <li><strong>Che dati sono?</strong><span class="muted small">Parole o numeri? Con un ordine o senza? Tutto il resto dipende da questo.</span></li>
+        <li><strong>I conti tornano?</strong><span class="muted small">Le percentuali fanno 100%, l'ultima cumulata fa il totale.</span></li>
+        <li><strong>Media e mediana sono vicine?</strong><span class="muted small">Se sono lontane c'è qualche valore fuori scala: fidati della mediana.</span></li>
+        <li><strong>Il grafico è onesto?</strong><span class="muted small">L'asse parte da zero? La torta ha poche fette? Nell'istogramma conta l'area?</span></li>
+      </ol>
+    </section>
+
+    <section id="quiz">
+      <div class="sec-title rv"><span class="num">R.3</span><h2>Quiz: 6 domande veloci</h2></div>
+      <p class="rv">Clicca la risposta che ti sembra giusta: ti diciamo subito se è corretta e perché.</p>
+      <div class="quiz" data-quiz>
+        <div class="q rv">
+          <h3>1. "Come ha pagato il cliente" che tipo di dato è?</h3>
+          <div class="opts"><button type="button" data-ok>Qualitativo nominale</button><button type="button">Qualitativo ordinale</button><button type="button">Quantitativo discreto</button><button type="button">Quantitativo continuo</button></div>
+          <p class="why" aria-live="polite" data-why="Sono parole senza un ordine: Carta non è più o meno di PayPal."></p>
+        </div>
+        <div class="q rv">
+          <h3>2. Per i voti Scarso, Sufficiente, Buono, Ottimo quale indice usi?</h3>
+          <div class="opts"><button type="button">Media</button><button type="button" data-ok>Mediana</button><button type="button">Nessuno</button></div>
+          <p class="why" aria-live="polite" data-why="I voti hanno un ordine ma non sono numeri veri: la mediana funziona, la media no."></p>
+        </div>
+        <div class="q rv">
+          <h3>3. Tempi di consegna: 20, 22, 25, 24, 200 ore. Cosa descrive meglio il servizio?</h3>
+          <div class="opts"><button type="button">La media (58,2 h)</button><button type="button" data-ok>La mediana (24 h)</button></div>
+          <p class="why" aria-live="polite" data-why="Il 200 è un valore fuori scala che tira la media verso l'alto. 4 consegne su 5 arrivano entro 25 ore."></p>
+        </div>
+        <div class="q rv">
+          <h3>4. Devi mostrare le vendite di 12 categorie di prodotti. Che grafico usi?</h3>
+          <div class="opts"><button type="button">Torta</button><button type="button" data-ok>Barre</button><button type="button">Linee</button></div>
+          <p class="why" aria-live="polite" data-why="Con 12 fette la torta diventa illeggibile, e le linee servono solo per il tempo."></p>
+        </div>
+        <div class="q rv">
+          <h3>5. Si possono calcolare le frequenze cumulate del metodo di pagamento?</h3>
+          <div class="opts"><button type="button">Sì</button><button type="button" data-ok>No</button></div>
+          <p class="why" aria-live="polite" data-why="Il metodo di pagamento non ha un ordine: sommare &quot;fino a PayPal&quot; non ha senso."></p>
+        </div>
+        <div class="q rv">
+          <h3>6. In un istogramma con fasce di larghezza diversa, l'altezza di ogni barra è…</h3>
+          <div class="opts"><button type="button">il numero di dati della fascia</button><button type="button" data-ok>la densità (dati diviso larghezza)</button></div>
+          <p class="why" aria-live="polite" data-why="Nell'istogramma conta l'area. Con fasce diverse, l'altezza giusta è la densità."></p>
+        </div>
+        <div class="score rv">
+          <span>Il tuo punteggio</span><b data-score>0 / 6</b>
+          <button type="button" data-quiz-reset>Ricomincia</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="glossario">
+      <div class="sec-title rv"><span class="num">R.4</span><h2>Glossario veloce</h2></div>
+      <label class="rv" for="gloss-q"><span class="muted small">Cerca una parola</span><br><input class="gloss-search" id="gloss-q" type="search" placeholder="es. mediana, outlier…" autocomplete="off"></label>
+      <dl class="gloss rv-stagger">
+        <div><dt>Unità statistica</dt><dd>La cosa che osservi (un ordine, un cliente, un pezzo).</dd></div>
+        <div><dt>Carattere / variabile</dt><dd>L'informazione che annoti su ogni unità.</dd></div>
+        <div><dt>Modalità</dt><dd>Le risposte possibili di un carattere.</dd></div>
+        <div><dt>Frequenza</dt><dd>Quante volte compare una risposta.</dd></div>
+        <div><dt>Frequenza cumulata</dt><dd>Un totale che si accumula riga dopo riga.</dd></div>
+        <div><dt>Media</dt><dd>Somma di tutti i valori divisa per quanti sono.</dd></div>
+        <div><dt>Mediana</dt><dd>Il valore in mezzo ai dati messi in fila.</dd></div>
+        <div><dt>Moda</dt><dd>La risposta che compare più spesso.</dd></div>
+        <div><dt>Classe</dt><dd>Una fascia di valori, es. da 24 a 48 ore.</dd></div>
+        <div><dt>Densità</dt><dd>Quanti dati ci sono per ogni unità di larghezza della fascia.</dd></div>
+        <div><dt>Outlier</dt><dd>Un valore fuori scala, molto lontano dagli altri.</dd></div>
+        <div><dt>Simmetrico / asimmetrico</dt><dd>Dati equilibrati attorno al centro, oppure sbilanciati da un lato.</dd></div>
+        <div><dt>Robusto</dt><dd>Che non si lascia spostare dai valori fuori scala (come la mediana).</dd></div>
+        <div><dt>Bimodale</dt><dd>Con due risposte "più frequenti" a pari merito.</dd></div>
+        <div><dt>Serie storica</dt><dd>Dati raccolti nel tempo, uno per ogni periodo.</dd></div>
+      </dl>
+      <p id="gloss-none" class="muted" hidden>Nessuna parola trovata. Prova con un altro termine.</p>
+    </section>
+  </main>
+</div>
+
+<nav class="wrap pager" aria-label="Pagina precedente e successiva">
+  <a class="prev" href="grafici.html"><span>← Indietro</span><b>Grafici</b></a>
+  
+</nav>
+<button class="totop" type="button" aria-label="Torna all'inizio">↑</button>
+<footer class="site">
+  <div class="wrap">
+    <div class="stack">
+      <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>Statistica semplice</a>
+      <p>Mini-guida alla statistica descrittiva, scritta come se la spiegassimo a un collega appena arrivato in azienda. Corso IFTS, Modulo di Statistica, lezioni 2, 3 e 4. I dati degli esempi sono inventati.</p>
+    </div>
+    <div>
+      <h3>Sezioni</h3>
+      <ul>
+        <li><a href="frequenze.html">A · Frequenze</a></li>
+        <li><a href="indici.html">B · Media, mediana, moda</a></li>
+        <li><a href="grafici.html">C · Grafici</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Strumenti</h3>
+      <ul>
+        <li><a href="indici.html#laboratorio">Calcolatrice</a></li>
+        <li><a href="riepilogo.html#quiz">Quiz</a></li>
+        <li><a href="riepilogo.html#glossario">Glossario</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<section class="page-hero">
+  <div class="wrap">
+    <span class="letter" aria-hidden="true">B</span>
+    <span class="eyebrow">Sezione B · Indici di posizione centrale</span>
+    <h1>Un numero per riassumere tutto</h1>
+    <p class="lead">Media, mediana e moda sono tre modi per dire "il valore tipico". Ognuno funziona bene in situazioni diverse: se scegli quello sbagliato, il riassunto racconta una cosa falsa.</p>
+    <div class="chips"><span class="chip">Media</span><span class="chip">Mediana</span><span class="chip">Moda</span><span class="chip">Calcolatrice</span><span class="chip">Quale usare</span></div>
+  </div>
+</section>
+
+<div class="wrap layout">
+  <nav class="toc" aria-label="In questa pagina">
+    <span class="eyebrow">In questa pagina</span>
+    <a href="#media">1 · Media</a>
+    <a href="#mediana">2 · Mediana</a>
+    <a href="#moda">3 · Moda</a>
+    <a href="#laboratorio">Calcolatrice</a>
+    <a href="#quale">4 · Quale usare</a>
+    <a href="#errori-b">Errori da evitare</a>
+  </nav>
+
+  <main class="content">
+    <section id="media">
+      <div class="sec-title rv"><span class="num">B.1 · x̄</span><h2>Media aritmetica</h2></div>
+      <p class="oneline rv">Quanto avrebbe ognuno se dividessimo tutto in parti uguali.</p>
+      <ul class="rv">
+        <li><strong>Come si calcola:</strong> sommi tutti i numeri e dividi per quanti sono.</li>
+        <li><strong>Quando usarla:</strong> solo con i <strong>numeri</strong>, e quando non ci sono valori strani molto lontani dagli altri.</li>
+        <li><strong>Attenzione:</strong> basta <strong>un solo valore fuori scala</strong> (in gergo <strong>outlier</strong>) per spostarla tanto.</li>
+      </ul>
+      <div class="formula rv">
+        <math><mover><mi>x</mi><mo>‾</mo></mover><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>x</mi><mi>i</mi></msub></mrow><mi>n</mi></mfrac></math>
+        <math><mover><mi>x</mi><mo>‾</mo></mover><mo>=</mo><mfrac><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><msub><mi>x</mi><mi>i</mi></msub><mo>·</mo><msub><mi>n</mi><mi>i</mi></msub></mrow><mi>N</mi></mfrac></math>
+        <span class="cap">∑ vuol dire "somma tutto". A sinistra: hai l'elenco dei numeri. A destra (<strong>media ponderata</strong>): i dati sono in tabella, e ogni valore si moltiplica per quante volte compare.</span>
+      </div>
+      <div class="ex rv">
+        <span class="lbl">Esempio · quanti articoli per ordine</span>
+        <ul><li><strong>Dati:</strong> 7 ordini da 1 articolo, 6 da 2, 4 da 3, 2 da 4, 1 da 5. In tutto 20 ordini.</li></ul>
+        <div class="formula">
+          <math><mover><mi>x</mi><mo>‾</mo></mover><mo>=</mo><mfrac><mrow><mn>1</mn><mo>·</mo><mn>7</mn><mo>+</mo><mn>2</mn><mo>·</mo><mn>6</mn><mo>+</mo><mn>3</mn><mo>·</mo><mn>4</mn><mo>+</mo><mn>4</mn><mo>·</mo><mn>2</mn><mo>+</mo><mn>5</mn><mo>·</mo><mn>1</mn></mrow><mn>20</mn></mfrac><mo>=</mo><mfrac><mn>44</mn><mn>20</mn></mfrac><mo>=</mo><mn>2,2</mn></math>
+        </div>
+        <ul><li><strong>Cosa significa:</strong> in media un ordine ha 2,2 articoli. Nessun ordine ha davvero 2,2 articoli, ed è normale: la media è un <strong>punto di riferimento</strong>.</li></ul>
+      </div>
+    </section>
+
+    <section id="mediana">
+      <div class="sec-title rv"><span class="num">B.2 · Me</span><h2>Mediana</h2></div>
+      <p class="oneline rv">Metti i dati in fila: la mediana è quello che sta esattamente in mezzo.</p>
+      <ul class="rv">
+        <li><strong>Cos'è:</strong> metà dei dati sta sotto la mediana, metà sta sopra.</li>
+        <li><strong>Quando usarla:</strong> con i <strong>voti</strong> (dati ordinali) e con numeri che hanno <strong>valori fuori scala</strong>: tempi, prezzi, stipendi.</li>
+        <li><strong>Punto forte:</strong> è <strong>robusta</strong>, cioè i valori fuori scala non la spostano.</li>
+      </ul>
+      <div class="sorter rv" data-sorter>
+        <div class="builder-bar">
+          <button class="btn btn-main" type="button" data-sort>Metti in fila</button>
+          <div class="toggle" role="group" aria-label="Quanti numeri">
+            <button type="button" data-set="dispari" aria-pressed="true">5 numeri (dispari)</button>
+            <button type="button" data-set="pari" aria-pressed="false">6 numeri (pari)</button>
+          </div>
+        </div>
+        <div class="track" aria-hidden="true"></div>
+        <p class="res" aria-live="polite">Tempi di 5 consegne: 24, 30, 26, 24, 120 ore. In fila: 24, 24, 26, 30, 120. Mediana = 26 h.</p>
+      </div>
+      <p class="rv"><strong>Come si trova, passo per passo:</strong></p>
+      <ol class="rv">
+        <li><strong>Metti in fila</strong> i dati dal più piccolo al più grande.</li>
+        <li><strong>Conta</strong> quanti sono (<i>n</i>).</li>
+        <li>Se <i>n</i> è <strong>dispari</strong>, c'è un solo dato in mezzo: è lui. Se è <strong>pari</strong>, in mezzo ce ne sono due: fai la loro media.</li>
+      </ol>
+      <div class="formula rv">
+        <math><mtext>n dispari:&#160;</mtext><mi>Me</mi><mo>=</mo><msub><mi>x</mi><mrow><mo>(</mo><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>)</mo></mrow></msub></math>
+        <math><mtext>n pari:&#160;</mtext><mi>Me</mi><mo>=</mo><mfrac><mrow><msub><mi>x</mi><mrow><mo>(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>)</mo></mrow></msub><mo>+</mo><msub><mi>x</mi><mrow><mo>(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msub></mrow><mn>2</mn></mfrac></math>
+        <span class="cap"><i>x</i><sub>(3)</sub> vuol dire "il dato che sta al 3° posto nella fila".</span>
+      </div>
+      <div class="ex rv">
+        <span class="lbl">Esempio · 5 consegne, una andata storta</span>
+        <ul>
+          <li><strong>Tempi:</strong> <span class="mono">24, 30, 26, 24, 120</span> ore. Un pacco si è perso in magazzino.</li>
+          <li><strong>In fila:</strong> <span class="mono">24, 24, <b>26</b>, 30, 120</span>. Sono 5: in mezzo c'è il 3°.</li>
+        </ul>
+        <div class="formula">
+          <math><mi>Me</mi><mo>=</mo><msub><mi>x</mi><mrow><mo>(</mo><mn>3</mn><mo>)</mo></mrow></msub><mo>=</mo><mn>26</mn><mtext>&#160;h</mtext></math>
+          <math><mover><mi>x</mi><mo>‾</mo></mover><mo>=</mo><mfrac><mn>224</mn><mn>5</mn></mfrac><mo>=</mo><mn>44,8</mn><mtext>&#160;h</mtext></math>
+        </div>
+        <ul>
+          <li><strong>Cosa significa:</strong> 4 consegne su 5 arrivano entro 30 ore. La mediana (26 h) lo racconta bene.</li>
+          <li>La media (44,8 h) fa sembrare il servizio lento per colpa di <strong>un solo pacco</strong>.</li>
+        </ul>
+      </div>
+      <figure class="chart rv" aria-label="Media e mediana a confronto">
+        <svg viewBox="0 0 370 112" role="img" aria-label="I cinque tempi su una retta: la media a 44,8 si sposta verso il valore fuori scala, la mediana resta a 26">
+          <line class="axis" x1="30" y1="72" x2="345" y2="72"/>
+          <g text-anchor="middle">
+            <line class="gl" x1="30" y1="72" x2="30" y2="77"/><text x="30" y="92">0</text>
+            <line class="gl" x1="89.6" y1="72" x2="89.6" y2="77"/><text x="89.6" y="92">25</text>
+            <line class="gl" x1="149.2" y1="72" x2="149.2" y2="77"/><text x="149.2" y="92">50</text>
+            <line class="gl" x1="208.8" y1="72" x2="208.8" y2="77"/><text x="208.8" y="92">75</text>
+            <line class="gl" x1="268.5" y1="72" x2="268.5" y2="77"/><text x="268.5" y="92">100</text>
+            <line class="gl" x1="328.1" y1="72" x2="328.1" y2="77"/><text x="328.1" y="92">125</text>
+            <text x="187" y="108">ore</text>
+          </g>
+          <line class="medl" x1="92" y1="22" x2="92" y2="72"/>
+          <line class="meanl" x1="136.8" y1="22" x2="136.8" y2="72"/>
+          <circle class="pt" cx="87.2" cy="63" r="5"/>
+          <circle class="pt" cx="87.2" cy="51" r="5"/>
+          <circle class="pt" cx="92" cy="39" r="5"/>
+          <circle class="pt" cx="101.5" cy="63" r="5"/>
+          <circle class="pt" cx="316.2" cy="63" r="5"/>
+          <text class="t-med" x="86" y="16" text-anchor="end">mediana 26</text>
+          <text class="t-mean" x="142" y="16">media 44,8</text>
+          <text x="316.2" y="48" text-anchor="middle">fuori scala</text>
+        </svg>
+        <figcaption>Il pacco perso (120 h) <b>tira la media</b> verso destra. <b>La mediana resta</b> dove sono quasi tutti i dati.</figcaption>
+      </figure>
+      <div class="ex rv">
+        <span class="lbl">Scorciatoia · se hai già la tabella</span>
+        <ul>
+          <li>Guarda la colonna <i>F<sub>i</sub></i> (cumulata relativa) e fermati alla <strong>prima riga che arriva almeno a 0,50</strong>, cioè a metà dei dati.</li>
+          <li><strong>Voti dei clienti:</strong> Sufficiente arriva a 0,30 (non basta), Buono arriva a 0,75 → <strong>Me = Buono</strong>.</li>
+          <li class="small muted">Caso particolare: se con dei numeri una riga vale esattamente 0,50, la mediana è la media tra quel valore e quello della riga dopo.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="moda">
+      <div class="sec-title rv"><span class="num">B.3 · Mo</span><h2>Moda</h2></div>
+      <p class="oneline rv">La risposta che compare più spesso. Come "la taglia più venduta".</p>
+      <ul class="rv">
+        <li><strong>Come si trova:</strong> nella tabella cerchi la frequenza <strong>più alta</strong> e leggi a quale risposta corrisponde.</li>
+        <li><strong>Quando usarla:</strong> è <strong>l'unica possibile con parole senza ordine</strong> (es. metodo di pagamento). Va bene anche per gli altri tipi.</li>
+        <li><strong>Con le fasce:</strong> si parla di <strong>classe modale</strong>, cioè la fascia più "affollata".</li>
+      </ul>
+      <div class="formula rv"><math><mi>Mo</mi><mo>=</mo><mtext>la risposta con la&#160;</mtext><msub><mi>n</mi><mi>i</mi></msub><mtext>&#160;più alta</mtext></math></div>
+      <div class="tabs rv" data-tabs>
+        <div class="tablist" role="tablist" aria-label="Esempi di moda">
+          <button type="button" role="tab" id="t-m1" aria-controls="p-m1" aria-selected="true">Una moda</button>
+          <button type="button" role="tab" id="t-m2" aria-controls="p-m2" aria-selected="false" tabindex="-1">Due mode</button>
+          <button type="button" role="tab" id="t-m3" aria-controls="p-m3" aria-selected="false" tabindex="-1">Nessuna moda</button>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-m1" aria-labelledby="t-m1">
+          <ul><li>Pagamenti: Carta 9, PayPal 6, Bonifico 3, Contrassegno 2 → <strong>Mo = Carta</strong>.</li><li>Attenzione: la moda è "Carta", non "9" (il 9 è quante volte compare).</li></ul>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-m2" aria-labelledby="t-m2" hidden>
+          <ul><li>Caschi venduti: <span class="mono">S, M, M, L, L, XL</span> → M e L compaiono 2 volte ciascuna → <strong>bimodale</strong>.</li><li>Spesso vuol dire che ci sono due gruppi di clienti diversi.</li></ul>
+        </div>
+        <div class="tabpanel" role="tabpanel" id="p-m3" aria-labelledby="t-m3" hidden>
+          <ul><li>Pesi: <span class="mono">1,2 · 1,5 · 2,0 · 2,4</span> kg → ognuno compare una volta sola → <strong>non c'è moda</strong>.</li><li>Con le misure capita spesso: per questo si usano le fasce.</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="laboratorio">
+      <div class="lab rv">
+        <span class="eyebrow">Prova tu · calcolatrice</span>
+        <label for="lab-in">Scrivi dei numeri: media, mediana e moda si calcolano da sole</label>
+        <div class="row">
+          <input id="lab-in" type="text" inputmode="decimal" value="24; 30; 26; 24; 120" autocomplete="off" spellcheck="false">
+          <button type="button" data-lab="24; 30; 26; 24; 120">Con un valore fuori scala</button>
+          <button type="button" data-lab="22; 24; 25; 25; 26; 28">Dati equilibrati</button>
+        </div>
+        <p class="hint">Separa i numeri con <span class="mono">;</span> o con uno spazio. I decimali con la virgola vanno bene (es. <span class="mono">18,5</span>).</p>
+        <div class="out" aria-live="polite">
+          <div><span>Quanti</span><b id="lab-n">–</b></div>
+          <div><span>Media</span><b id="lab-mean">–</b></div>
+          <div><span>Mediana</span><b id="lab-med">–</b></div>
+          <div><span>Moda</span><b id="lab-mode">–</b></div>
+        </div>
+        <p id="lab-sorted"></p>
+        <p id="lab-msg"></p>
+      </div>
+    </section>
+
+    <section id="quale">
+      <div class="sec-title rv"><span class="num">B.4</span><h2>Quale usare? La tavola comparativa</h2></div>
+      <div class="tbl rv">
+        <table>
+          <thead><tr><th>Che dati hai</th><th>Media</th><th>Mediana</th><th>Moda</th><th>Usa questa</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Parole senza ordine</strong> (qualitativi nominali)</td><td class="no">No</td><td class="no">No</td><td class="yes">Sì</td><td><strong>Moda</strong></td></tr>
+            <tr><td><strong>Parole con un ordine</strong> (qualitativi ordinali)</td><td class="no">No</td><td class="yes">Sì</td><td class="yes">Sì</td><td><strong>Mediana</strong> (più la moda)</td></tr>
+            <tr><td><strong>Numeri senza valori fuori scala</strong> (dati simmetrici)</td><td class="yes">Sì</td><td class="yes">Sì</td><td class="yes">Sì</td><td><strong>Media</strong>: tiene conto di tutti i valori</td></tr>
+            <tr><td><strong>Numeri con valori fuori scala</strong> (outlier o dati asimmetrici)</td><td>Con attenzione</td><td class="yes">Sì</td><td class="yes">Sì</td><td><strong>Mediana</strong> (e mostra anche la media)</td></tr>
+          </tbody>
+          <caption>Trucco: se media e mediana sono molto diverse, c'è qualche valore fuori scala. Fidati della mediana.</caption>
+        </table>
+      </div>
+    </section>
+
+    <section id="errori-b">
+      <div class="warn rv">
+        <span class="lbl">Errore comune · La media dei voti</span>
+        <p><strong>Non fare la media di voti a parole</strong>, anche se li trasformi in numeri (Scarso = 1, Sufficiente = 2…).</p>
+        <ul>
+          <li>Quei numeri sono solo <strong>etichette</strong>: nessuno può dire che tra Scarso e Sufficiente ci sia la stessa distanza che tra Buono e Ottimo.</li>
+          <li>Per i voti usa la <strong>mediana</strong> (e la moda).</li>
+        </ul>
+      </div>
+      <div class="warn rv">
+        <span class="lbl">Errore comune · Mediana senza mettere in fila</span>
+        <ul>
+          <li>Nella lista <span class="mono">24, 30, 26, 24, 120</span> il numero al centro è 26 <strong>per caso</strong>. La regola è: <strong>prima metti in fila</strong>, poi guarda in mezzo.</li>
+          <li>Se salti questo passaggio, il risultato è casuale.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</div>
